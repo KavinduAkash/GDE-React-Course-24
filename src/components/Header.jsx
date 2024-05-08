@@ -1,20 +1,27 @@
 /*
 * Stateless component for the header
 * */
+import SearchBar from "./SearchBar.jsx";
+import NavBar from "./NavBar.jsx";
+
 function Header(props) {
     return (
         <header>
             <h1>{props.name}</h1>
 
-            <input type="text" placeholder="Search post"/>
-            <button>Search</button>
+            {/*<input type="text" placeholder="Search post"/>*/}
+            {/*<button>Search</button>*/}
 
-            <nav>
-                <ul>
-                    <li><a href="/">Posts</a></li>
-                    <li><a href="/new">New</a></li>
-                </ul>
-            </nav>
+            <SearchBar/>
+
+            {/*<nav>*/}
+            {/*    <ul>*/}
+            {/*        <li><a href="/">Posts</a></li>*/}
+            {/*        <li><a href="/new">New</a></li>*/}
+            {/*    </ul>*/}
+            {/*</nav>*/}
+
+            <NavBar/>
         </header>
     );
 }
