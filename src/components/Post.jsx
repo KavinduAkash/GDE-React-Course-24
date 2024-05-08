@@ -5,14 +5,27 @@
 import React from 'react';
 
 class Post extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>{this.props.title}</h1>
-        <p>{this.props.body}</p>
-      </div>
-    );
-  }
+    state = {
+        like: 0
+    }
+
+    like = () => {
+        this.setState({like: this.state.like + 1})
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>{this.props.title}</h1>
+                <p>{this.props.body}</p>
+                <div>
+                    <span>{this.state.like}</span>
+                    <button onClick={this.like}>Like</button>
+                </div>
+
+            </div>
+        );
+    }
 }
 
 export default Post;
