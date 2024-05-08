@@ -6,7 +6,7 @@ function App() {
 
     return (
         <>
-            <Header/>
+            <Header name={"My blog zone"}/>
             <Post title={"Welcome"} body={"Welcome to the blog zone."}/>
             <Post title={"Lesson 01"} body={"Welcome to Lesson 01."}/>
             <Post title={"Lesson 02"} body={"Welcome to Lesson 02."}/>
