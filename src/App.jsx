@@ -1,16 +1,18 @@
 import './App.css'
 import Post from "./components/Post.jsx";
+import Header from "./components/Header.jsx";
 
 function App() {
 
-  return (
-    <>
-      <Post/>
-      <Post/>
-      <Post/>
-      <Post/>
-    </>
-  )
+    return (
+        <>
+            <Header/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+        </>
+    )
 }
 
 export default App
