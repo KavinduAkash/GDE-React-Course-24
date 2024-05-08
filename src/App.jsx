@@ -7,10 +7,10 @@ function App() {
     return (
         <>
             <Header/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
+            <Post title={"Welcome"} body={"Welcome to the blog zone."}/>
+            <Post title={"Lesson 01"} body={"Welcome to Lesson 01."}/>
+            <Post title={"Lesson 02"} body={"Welcome to Lesson 02."}/>
+            <Post title={"Lesson 03"} body={"Welcome to Lesson 03."}/>
         </>
     )
 }
