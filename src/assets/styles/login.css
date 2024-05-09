@@ -1,0 +1,14 @@
+#login {
+    background-color: #f5f5f5;
+    width: fit-content;
+    padding: 25px;
+    margin: 20px auto;
+}
+
+#login > div {
+    margin: 25px;
+}
+
+#login > div > label {
+    display: block;
+}
