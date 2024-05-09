@@ -1,6 +1,7 @@
 import './App.css'
 import Post from "./components/Post.jsx";
 import Header from "./components/Header.jsx";
+import withLoadingIndicator from "./components/hoc/withLoadingIndicator";
 
 // posts array
 const posts = [
@@ -16,9 +17,10 @@ function App() {
         <>
             <Header name={"My blog zone"}/>
             {
-                posts.map((post, index) => (
-                    <Post key={index} title={post.title} body={post.body}/>
-                ))
+                posts.map((post, index) => {
+                    let WithLoadingIndicator = withLoadingIndicator(Post);
+                    return <WithLoadingIndicator key={index} title={post.title} body={post.body}/>
+                })
             }
         </>
     )

@@ -16,13 +16,18 @@ class Post extends React.Component {
     render() {
         return (
             <div>
-                <h1>{this.props.title}</h1>
-                <p>{this.props.body}</p>
-                <div>
-                    <span>{this.state.like}</span>
-                    <button onClick={this.like}>Like</button>
-                </div>
+                {
+                    this.props.loading ? <h1>Loading...</h1> :
+                        <div>
+                            <h1>{this.props.title}</h1>
+                            <p>{this.props.body}</p>
+                            <div>
+                                <span>{this.state.like}</span>
+                                <button onClick={this.like}>Like</button>
+                            </div>
 
+                        </div>
+                }
             </div>
         );
     }
