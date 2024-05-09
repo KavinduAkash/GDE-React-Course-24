@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import "../assets/styles/post.css";
 
 class Post extends React.Component {
     state = {
@@ -15,7 +16,7 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={"post"}>
                 {
                     this.props.loading ? <h1>Loading...</h1> :
                         <div>

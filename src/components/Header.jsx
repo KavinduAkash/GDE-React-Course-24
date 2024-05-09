@@ -6,7 +6,7 @@ import NavBar from "./NavBar.jsx";
 
 function Header(props) {
     return (
-        <header>
+        <header id={"header"}>
             <h1>{props.name}</h1>
 
             {/*<input type="text" placeholder="Search post"/>*/}

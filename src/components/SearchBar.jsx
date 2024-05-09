@@ -4,7 +4,7 @@ function SearchBar() {
     const[searchTerm, setSearchTerm] = useState(null);
 
     return (
-        <div>
+        <div id={"search-bar"}>
             <input type="text" placeholder="Search post"
                    onChange={e => setSearchTerm(e.target.value)}
             />
