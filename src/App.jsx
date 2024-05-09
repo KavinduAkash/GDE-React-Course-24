@@ -3,7 +3,7 @@ import Header from "./components/Header.jsx";
 import LoginView from "./views/LoginView.jsx";
 import PostView from "./views/PostView.jsx";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
     return (

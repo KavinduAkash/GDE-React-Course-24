@@ -1,23 +1,26 @@
-import React from "react";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import "../assets/styles/login.css";
 
 function LoginView() {
     return (
         <div>
-            <form id="login">
-                <h1>Login</h1>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email"/>
+            <Form id="login">
+                <h1 className={"text-center"}>Login</h1>
+                <Form.Group>
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
+                <div className={"text-center"}>
+                    <Button variant="primary" type="button">
+                        Login
+                    </Button>
                 </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" id="password"/>
-                </div>
-                <div>
-                    <button type="submit">Login</button>
-                </div>
-            </form>
+            </Form>
         </div>
     );
 }
