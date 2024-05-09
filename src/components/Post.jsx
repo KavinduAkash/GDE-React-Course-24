@@ -4,6 +4,7 @@
 
 import React from 'react';
 import "../assets/styles/post.css";
+import {Button} from "react-bootstrap";
 
 class Post extends React.Component {
     state = {
@@ -23,8 +24,7 @@ class Post extends React.Component {
                             <h1>{this.props.title}</h1>
                             <p>{this.props.body}</p>
                             <div>
-                                <span>{this.state.like}</span>
-                                <button onClick={this.like}>Like</button>
+                                <Button variant="outline-primary" onClick={this.like}>{this.state.like} Like</Button>
                             </div>
 
                         </div>
