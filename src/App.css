@@ -4,6 +4,11 @@
     background: lightblue;
 }
 
+#header > h1 {
+    font-size: 30px;
+    margin: 10px;
+}
+
 #search-bar {
     display: flex;
     align-items: center;
