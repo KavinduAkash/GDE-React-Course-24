@@ -1,6 +1,7 @@
 import withLoadingIndicator from "../components/hoc/withLoadingIndicator.jsx";
 import Post from "../components/Post.jsx";
 import {useEffect, useState} from "react";
+import Axios from "axios";
 
 // posts array
 // const posts = [
@@ -15,10 +16,16 @@ function PostView() {
     const[posts, setPosts] = useState([]);
 
     const getAllPosts = () => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(response => response.json())
-            .then(json => {
-                setPosts(json)
+
+        // fetch('https://jsonplaceholder.typicode.com/posts')
+        //     .then(response => response.json())
+        //     .then(json => {
+        //         setPosts(json)
+        //     });
+
+        Axios.get('https://jsonplaceholder.typicode.com/posts')
+            .then(response => {
+                setPosts(response.data)
             });
     }
 
