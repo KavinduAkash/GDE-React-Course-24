@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import "../assets/styles/login.css";
 import {useDispatch} from "react-redux";
 import {useState} from "react";
-import {logoutUser} from "../redux/UserActions.js";
+import {loginUser, logoutUser} from "../redux/UserActions.js";
 import {useNavigate} from "react-router-dom";
 
 const userList = [{id: 1, email: 'jhonedeo@gmail.com', password: '123'}, {
@@ -23,7 +23,8 @@ function LoginView() {
     const login = () => {
         let user = userList.filter(user => user.email == email && user.password == password);
         if (user[0]) {
-            dispatch(logoutUser(user[0]));
+            console.log("user[0]", user[0]);
+            dispatch(loginUser(user[0]));
             navigate("/");
         } else {
             alert('Invalid email or password');

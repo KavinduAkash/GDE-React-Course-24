@@ -13,7 +13,9 @@ function Header(props) {
     let navigate = useNavigate();
     let dispatch = useDispatch();
 
-    const user = useSelector(state => state.user);
+    const user = useSelector(state => state.userReducer.user);
+
+    console.log(user);
 
     const logout = () => {
         dispatch(logoutUser(null));

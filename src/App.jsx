@@ -5,14 +5,16 @@ import PostView from "./views/PostView.jsx";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Provider} from "react-redux";
-import {combineReducers, createStore} from "redux";
+import {combineReducers, createStore, applyMiddleware} from "redux";
 import userReducer from "./redux/UserReducer.js";
+import {thunk} from "redux-thunk";
 function App() {
 
     const rootReducer = combineReducers({
-        UserReducer: userReducer, // Add more reducers as needed
+        userReducer: userReducer, // Add more reducers as needed
     });
-    const store = createStore(rootReducer);
+    let middleware = applyMiddleware(thunk);
+    const store = createStore(rootReducer, middleware);
 
     return (
         <>
