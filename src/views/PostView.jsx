@@ -26,6 +26,8 @@ function PostView() {
         Axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(response => {
                 setPosts(response.data)
+            }).catch(error => {
+                alert(error.toString());
             });
     }
 
