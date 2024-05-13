@@ -2,6 +2,8 @@ import withLoadingIndicator from "../components/hoc/withLoadingIndicator.jsx";
 import Post from "../components/Post.jsx";
 import {useEffect, useState} from "react";
 import Axios from "axios";
+import {useSelector} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 // posts array
 // const posts = [
@@ -13,8 +15,16 @@ import Axios from "axios";
 
 function PostView() {
 
+    const navigate = useNavigate();
+    const user = useSelector(state => state.userReducer.user);
     const[posts, setPosts] = useState([]);
 
+    useEffect(() => {
+        alert("Please login to view blog posts");
+        if(!user) {
+            navigate("/login");
+        }
+    }, [])
     const getAllPosts = () => {
 
         // fetch('https://jsonplaceholder.typicode.com/posts')
